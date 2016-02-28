@@ -175,10 +175,11 @@ final class MonocleWindowManager {
 
             @Override
             public void run() {
-                Screen.notifySettingsChanged();
-                instance.getFocusedWindow().setFullScreen(true);
-                instance.repaintAll();
-                Toolkit.getToolkit().requestNextPulse();
+               //[ERROR] /src/jbrowserdriver/src/com/sun/glass/ui/monocle/MonocleWindowManager.java:[178,23] notifySettingsChanged() has private access in com.sun.glass.ui.Screen
+               //Screen.notifySettingsChanged();
+               //instance.getFocusedWindow().setFullScreen(true);
+               //instance.repaintAll();
+               //Toolkit.getToolkit().requestNextPulse();
             }
         });
     }

@@ -34,6 +34,10 @@ import com.sun.glass.ui.delegate.ClipboardDelegate;
 import com.sun.glass.ui.delegate.MenuBarDelegate;
 import com.sun.glass.ui.delegate.MenuDelegate;
 import com.sun.glass.ui.delegate.MenuItemDelegate;
+import com.sun.glass.ui.accessible.AccessibleBaseProvider;
+import com.sun.javafx.accessible.providers.AccessibleProvider;
+import com.sun.glass.ui.accessible.AccessibleRoot;
+import com.sun.glass.ui.Window;
 
 public class MonoclePlatformFactory extends PlatformFactory {
 
@@ -61,5 +65,14 @@ public class MonoclePlatformFactory extends PlatformFactory {
     public ClipboardDelegate createClipboardDelegate() {
         return new MonocleClipboardDelegate();
     }
+    
+    @Override
+    public AccessibleBaseProvider createAccessibleProvider(Object node) {
+        throw new UnsupportedOperationException();
+    }
 
+    @Override
+    public AccessibleRoot createAccessibleRoot(Object node, Window window) {
+        throw new UnsupportedOperationException();
+    }
 }
